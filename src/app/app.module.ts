@@ -7,10 +7,12 @@ import { AppComponent } from './app.component';
 import { NavBannerComponent } from './nav-banner/nav-banner.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FooterComponent } from './footer/footer.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 const appRoutes: Routes = [
   { path: 'gallery',      component: GalleryComponent },
-  { path: 'aboutus',      component: GalleryComponent }
+  { path: 'aboutus',      component: AboutusComponent }
   
   // {
   //   path: 'heroes',
@@ -28,7 +30,9 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     NavBannerComponent,
-    GalleryComponent
+    GalleryComponent,
+    FooterComponent,
+    AboutusComponent
   ],
   imports: [
     BrowserModule,
