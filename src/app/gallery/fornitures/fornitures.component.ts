@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ImageFetcherService } from '../../image-fetcher.service';
 @Component({
   selector: 'app-fornitures',
   templateUrl: './fornitures.component.html',
@@ -7,24 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FornituresComponent implements OnInit {
   numOfPics = 27;
-  images = new Array();
-  data = new Array();
-  generateData(){
-    for (let index = 1; index < this.numOfPics; index++) {
-      this.data[index] = "assets/fornitures/1 (" + index + ").jpg";
-    }
-  }
-  preload() {
-    for (var i = 0; i < this.data.length; i++) {
-      this.images[i] = new Image()
-      this.images[i].src = this.data[i+1];
-    }
-  }
-
-  constructor() { }
+  categoryName = 'fornitures';
+  displayName = 'רהיטים';
+  images: Array<string>;
+  constructor (private _imageFetcher: ImageFetcherService) { }
   ngOnInit() {
-    this.generateData();
-    this.preload();
-    console.log(this.images);
+    this.images = this._imageFetcher.preload(this.numOfPics, this.categoryName);
   }
 }

@@ -19,6 +19,7 @@ import { GlassesComponent } from './gallery/glasses/glasses.component';
 import { HangingComponent } from './gallery/hanging/hanging.component';
 import { MirrorsComponent } from './gallery/mirrors/mirrors.component';
 import { PillowsComponent } from './gallery/pillows/pillows.component';
+import { ImageFetcherService } from './image-fetcher.service';
 
 const appRoutes: Routes = [
   { path: 'gallery',      component: GalleryComponent },
@@ -61,7 +62,7 @@ const appRoutes: Routes = [
     ),
     ModalGalleryModule.forRoot(),
   ],
-  providers: [],
+  providers: [ImageFetcherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
