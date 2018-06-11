@@ -1,5 +1,27 @@
-<p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis metus non nisi elementum pulvinar cursus at nulla. Nullam vehicula venenatis dui, eu vestibulum diam pellentesque in. Phasellus non enim tortor. Phasellus at bibendum ipsum. Proin eget pulvinar nibh, nec consequat lorem. Nulla ut ornare dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+<div class="container">
+        <h4 class="text-center p-2" style="color:white">אודות החברה</h4>
+   <p class="p-2"style="color: #C9C9C9; text-align: right; direction: rtl;">
+    אנחנו "בריק" , <br>
+    יבואנים ומשווקים של אקססוריז לבית וריהוט משלים משנת 2015.<br class="br-on-mobile"/>
+    החברה הוקמה על ידנו, זאב ואור בריקמן, אבא ובן, כשהחלטנו להפוך אהבה אמיתית<br class="br-on-mobile"/> לעיצוב - למקצוע.
+    תוך זמן קצר התרחבנו והתפתחנו וכיום אנחנו גאים לספק את המוצרים והשירותים שלנו לכ-200 סניפים בכל רחבי הארץ.<br class="br-on-mobile"/>
+    את המוצרים שלנו אנחנו בוחרים בקפידה תוך שמירה על איכות,שימושיות,ונראות מירביות.
+     מכלל מוצרנו ניתן למצוא מראות, שעונים, מנורות, כורסאות, פרחים ושלל מוצרים שישדרגו כל בית.
+     לקהל לקוחתינו הפרטי, אנו מחזקים בחנות קונספט בשם "המרתף",<br class="br-on-mobile"/>
+     הרצל 4, גן יבנה.
+     <br>
+     <br>
+     יצירת קשר:<br>
+     זאב - 0545401307<br>
+     אור - 0506770162<br>
+     חנות - 086289737 <br>
+     <br>
+     אנחנו כאן, אתם מוזמנים!
+   </p>
 
-    Curabitur mollis convallis leo nec porttitor. Nunc eget iaculis augue, ut sollicitudin elit. Praesent efficitur nibh in nulla aliquam lacinia. Nam vulputate vitae risus id pharetra. Aliquam blandit hendrerit ex, id dictum dui malesuada id. Nunc vitae ipsum quam. Nullam a eleifend mauris. Pellentesque ipsum mauris, mollis eget tempus a, finibus ac ante. Phasellus a facilisis nisi, quis rhoncus ante. Duis efficitur pellentesque ligula nec pretium.
-</p>
+   <!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+<agm-map [latitude]="lat" [longitude]="lng"  [zoom]="zoom"> 
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+    </agm-map>
+</div>

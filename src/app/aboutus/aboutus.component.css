@@ -1,0 +1,14 @@
+.br-on-mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    .br-on-mobile {
+        display: block;
+    }
+}
+
+
+agm-map {
+    height: 300px;
+    }

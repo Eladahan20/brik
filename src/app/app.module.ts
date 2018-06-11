@@ -20,6 +20,7 @@ import { HangingComponent } from './gallery/hanging/hanging.component';
 import { MirrorsComponent } from './gallery/mirrors/mirrors.component';
 import { PillowsComponent } from './gallery/pillows/pillows.component';
 import { ImageFetcherService } from './image-fetcher.service';
+import { AgmCoreModule } from '@agm/core';
 
 const appRoutes: Routes = [
   { path: 'gallery',      component: GalleryComponent },
@@ -60,6 +61,9 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCsjr7VvHLQC8f3os0g_uM5cElNujKFREk'
+    }),
     ModalGalleryModule.forRoot(),
   ],
   providers: [ImageFetcherService],

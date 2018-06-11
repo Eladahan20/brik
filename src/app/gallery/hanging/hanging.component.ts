@@ -9,7 +9,7 @@ import { ImageFetcherService } from '../../image-fetcher.service';
 export class HangingComponent implements OnInit {
 
   categoryName = 'hanging';
-  displayName = 'תמונות';
+  displayName = 'מוצרים לתלייה';
   numOfPics = 21;
   images: Array<string>;
   constructor (private _imageFetcher: ImageFetcherService) { }
