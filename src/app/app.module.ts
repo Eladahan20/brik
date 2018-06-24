@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import 'hammerjs';
 import 'mousetrap';
 import { ModalGalleryModule } from 'angular-modal-gallery';
@@ -21,10 +23,12 @@ import { MirrorsComponent } from './gallery/mirrors/mirrors.component';
 import { PillowsComponent } from './gallery/pillows/pillows.component';
 import { ImageFetcherService } from './image-fetcher.service';
 import { AgmCoreModule } from '@agm/core';
-
+import { ContactComponent } from './contact/contact.component';
+import { MailerService} from './mailer.service';
 const appRoutes: Routes = [
   { path: 'gallery',      component: GalleryComponent },
   { path: 'aboutus',      component: AboutusComponent },
+  { path: 'contact',      component: ContactComponent },
   { path: 'gallery/fornitures', component: FornituresComponent},
   { path: 'gallery/accessories', component: AccessoriesComponent},
   { path: 'gallery/candles', component: CandlesComponent},
@@ -53,10 +57,12 @@ const appRoutes: Routes = [
     GlassesComponent,
     HangingComponent,
     MirrorsComponent,
-    PillowsComponent
+    PillowsComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
@@ -65,8 +71,11 @@ const appRoutes: Routes = [
       apiKey: 'AIzaSyCsjr7VvHLQC8f3os0g_uM5cElNujKFREk'
     }),
     ModalGalleryModule.forRoot(),
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [ImageFetcherService],
+  providers: [ImageFetcherService,
+  MailerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
